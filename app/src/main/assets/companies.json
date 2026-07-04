@@ -1,0 +1,98 @@
+[
+  {
+    "id": "pasha_bank",
+    "name": "PASHA Bank OJSC",
+    "current_stack": "Monolithic Java EE, Oracle DB, On-Premises VMware, SOAP APIs, AngularJS legacy panels",
+    "weakness": "High maintenance overhead, slow deployment cycles (2 weeks), rigid scaling, high database licensing costs ($12k/month)",
+    "cost_before": 24000,
+    "ai_solution": "Microservices in Kotlin + Spring Boot, Serverless Container Host, Supabase PostgreSQL, GitHub Copilot automated tests, AI code generation pipeline",
+    "cost_after_ai": 6800,
+    "saving_percent": 71.6,
+    "hiring_llm": true,
+    "llm_title": "AI Solutions Architect",
+    "llm_salary": "4,500 - 6,000 AZN",
+    "career_link": "https://pashabank.jobs",
+    "comparison": [
+      {"metric": "Infrastructure", "before": "On-prem VMware ($8,000)", "after": "Serverless Container ($1,500)"},
+      {"metric": "Database License", "before": "Oracle DB Enterprise ($12,000)", "after": "Supabase PostgreSQL ($800)"},
+      {"metric": "Dev Cycle & QA", "before": "Manual QA + SOAP APIs ($4,000)", "after": "AI Auto-generated Testing ($4,500)"}
+    ],
+    "migration_plan": [
+      {"days": "Day 1-30", "title": "DB Migration & API Wrapper", "detail": "Migrate core schemas from Oracle to PostgreSQL. Wrap legacy SOAP endpoints in lightweight Kotlin APIs."},
+      {"days": "Day 31-60", "title": "Serverless & Copilot Integration", "detail": "Deploy Kotlin microservices to a Serverless Container platform. Equip development teams with LLM code completion and automated testing engines."},
+      {"days": "Day 61-90", "title": "CI/CD & Final Handoff", "detail": "Implement fully automated AI-driven regression tests. Deprecate legacy monolithic VMs and roll out new systems with 71% cost savings."}
+    ]
+  },
+  {
+    "id": "socar_it",
+    "name": "SOCAR IT Division",
+    "current_stack": "Legacy ASP.NET WebForms, MS SQL Server, Manual Excel reports, IIS Windows Server VMs",
+    "weakness": "Prone to downtime under peak loads, high license footprint, database locking issues, $15k/month server cost",
+    "cost_before": 19500,
+    "ai_solution": "Next.js 14 Serverless, Node.js + NestJS API, PostgreSQL, AI-driven data pipelines for report generation, Docker containerization",
+    "cost_after_ai": 4900,
+    "saving_percent": 74.8,
+    "hiring_llm": false,
+    "llm_title": "LLM Engineer",
+    "llm_salary": "3,000 - 4,500 AZN",
+    "career_link": "https://socar.az/careers",
+    "comparison": [
+      {"metric": "Compute Nodes", "before": "IIS on Windows VMs ($7,500)", "after": "Serverless edge functions ($900)"},
+      {"metric": "Database Engine", "before": "MS SQL Enterprise ($8,000)", "after": "Managed PostgreSQL ($1,200)"},
+      {"metric": "Analytics & Reporting", "before": "Manual Excel collation ($4,000)", "after": "AI-automated analytics pipeline ($2,800)"}
+    ],
+    "migration_plan": [
+      {"days": "Day 1-30", "title": "System Audit & Containerization", "detail": "Analyze dependency tree of .NET WebForms. Containerize web applications using Docker for cloud readiness."},
+      {"days": "Day 31-60", "title": "Next.js Frontend & API Rewrite", "detail": "Build modular Next.js dashboard. Shift computation-heavy reporting to serverless functions and PostgreSQL views."},
+      {"days": "Day 61-90", "title": "AI Report Integration", "detail": "Deploy custom report automation engine. Validate pipeline performance and transition off expensive Windows server licensing."}
+    ]
+  },
+  {
+    "id": "azercell",
+    "name": "Azercell Telecom LLC",
+    "current_stack": "Monolithic PHP, jQuery, Apache servers, MySQL on-prem clustering, manual customer service operations",
+    "weakness": "High load latency (>4s) during campaigns, costly server over-provisioning, manual billing reconciliation, $32k/month maintenance",
+    "cost_before": 32000,
+    "ai_solution": "FastAPI with Python, Redis Cache, AWS ECS Fargate, Gemini-based automated customer query routing & billing assistant",
+    "cost_after_ai": 9200,
+    "saving_percent": 71.2,
+    "hiring_llm": true,
+    "llm_title": "LLM Engineer",
+    "llm_salary": "4,000 - 5,500 AZN",
+    "career_link": "https://azercell.com/careers",
+    "comparison": [
+      {"metric": "Compute & Scaling", "before": "Apache On-Prem Servers ($12,000)", "after": "AWS ECS Fargate ($2,500)"},
+      {"metric": "Customer Support Ops", "before": "Manual Query Handling ($14,000)", "after": "Gemini AI Agent Assist ($5,000)"},
+      {"metric": "Caching & DB", "before": "MySQL On-Prem Cluster ($6,000)", "after": "AWS RDS + Redis ($1,700)"}
+    ],
+    "migration_plan": [
+      {"days": "Day 1-30", "title": "Schema Refactoring & AWS Setup", "detail": "Migrate MySQL clusters to AWS RDS. Establish Fargate orchestration and secure AWS networking configurations."},
+      {"days": "Day 31-60", "title": "AI Customer Agent Sandbox", "detail": "Develop and fine-tune LLM billing & query agents. Build the Python FastAPI communication layer."},
+      {"days": "Day 61-90", "title": "Production Rollout", "detail": "Redirect 60% of routine support tickets to the AI agent. Terminate legacy physical servers, realizing a 71% cost reduction."}
+    ]
+  },
+  {
+    "id": "kapital_bank",
+    "name": "Kapital Bank",
+    "current_stack": "C#/.NET Core Monoliths, Oracle Database, RedHat OpenShift, manual code review workflows",
+    "weakness": "Slow code pipeline throughput, elevated infrastructure idle times, high vendor support cost, $28k/month overall cost",
+    "cost_before": 28000,
+    "ai_solution": "Spring Boot Microservices, Supabase Managed DB, GitHub Advanced Security with AI remediation, automated CI/CD pipelines",
+    "cost_after_ai": 8400,
+    "saving_percent": 70.0,
+    "hiring_llm": true,
+    "llm_title": "AI Solutions Architect",
+    "llm_salary": "5,000 - 7,000 AZN",
+    "career_link": "https://kapitalbank.jobs",
+    "comparison": [
+      {"metric": "Infrastructure", "before": "OpenShift Subscriptions ($10,000)", "after": "Managed Kubernetes ($2,500)"},
+      {"metric": "DevOps & Pipelines", "before": "Manual Reviews & QA ($8,000)", "after": "AI-Driven CI/CD & Scan ($3,900)"},
+      {"metric": "Database Engine", "before": "Oracle DB Support ($10,000)", "after": "Supabase Postgres ($2,000)"}
+    ],
+    "migration_plan": [
+      {"days": "Day 1-30", "title": "Architecture Decomposition", "detail": "Decompose monolithic APIs into isolated microservices. Map Oracle structures to Postgres schemas."},
+      {"days": "Day 31-60", "title": "CI/CD & AI SecOps Integration", "detail": "Integrate AI security scanners into GitHub pipelines. Setup managed database clusters on cloud."},
+      {"days": "Day 61-90", "title": "Final Switchover", "detail": "Deploy services in parallel, run automated integration tests, and shift production traffic dynamically to achieve 70% savings."}
+    ]
+  }
+]

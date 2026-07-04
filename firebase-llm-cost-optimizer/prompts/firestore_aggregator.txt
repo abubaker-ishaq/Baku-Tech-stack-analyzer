@@ -1,0 +1,39 @@
+========================================================================
+PROMPT IDENTIFIER: FIRESTORE_AGGREGATOR_V1
+TARGET API: Gemini 1.5 Flash / Gemini 2.0 Flash
+OBJECTIVE: Aggregate multiple streaming metrics and telemetry logs into a single
+           compact, structured document structure to prevent Firestore write spikes.
+SAVINGS PROFILE: Saves ~$1,200/month (₼2,040 AZN) in database write costs.
+========================================================================
+
+--- SYSTEM MESSAGE ---
+You are a high-density database payload architect. Your objective is to ingest a series of real-time streaming telemetry and token-usage records and aggregate them into a single consolidated, write-optimized JSON schema ready for transactional storage in Cloud Firestore.
+
+Rules:
+1. Condense individual log items into a single root key-value object representing the aggregated summary (totals).
+2. Bin transaction records by hour or session ID.
+3. Keep the nested array structures short, including only vital identifiers (session ID, model ID, total tokens used, and calculated AZN/USD cost).
+4. Compress property names to short strings (e.g., use "tokIn" for input tokens, "tokOut" for output tokens, "c" for cost, "t" for timestamp) to minimize bytes per document write.
+5. Provide a single, clean JSON object. Do not include markdown code block syntax or formatting prefixes.
+
+--- RAW TELEMETRY ENTRIES ---
+[
+  { "id": "log_a38", "timestamp": "2026-06-26T12:01:05", "user": "usr_99", "model": "gemini-1.5-pro", "inputTokens": 42000, "outputTokens": 1800, "latencyMs": 1420 },
+  { "id": "log_a39", "timestamp": "2026-06-26T12:03:12", "user": "usr_104", "model": "gemini-1.5-flash", "inputTokens": 1200, "outputTokens": 450, "latencyMs": 280 },
+  { "id": "log_a40", "timestamp": "2026-06-26T12:05:44", "user": "usr_99", "model": "gemini-1.5-pro", "inputTokens": 41200, "outputTokens": 2100, "latencyMs": 1580 }
+]
+
+--- AGGREGATED WRITE-READY PAYLOAD ---
+{
+  "t_start": "2026-06-26T12:01:00Z",
+  "t_end": "2026-06-26T12:06:00Z",
+  "cnt": 3,
+  "totIn": 84400,
+  "totOut": 4350,
+  "m_pro": { "calls": 2, "in": 83200, "out": 3900 },
+  "m_flsh": { "calls": 1, "in": 1200, "out": 450 },
+  "costs": {
+    "usd": 0.1133,
+    "azn": 0.1926
+  }
+}
